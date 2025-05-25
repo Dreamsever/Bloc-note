@@ -1,0 +1,83 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #FEFAE0;
+  color: #333;
+  margin: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.button-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #6B705C;
+}
+
+a {
+  text-decoration: none;
+  color: #D4A373;
+  font-weight: bold;
+}
+
+.list-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.todo-card {
+  background-color: #FAEDCD;
+  border: 1px solid #CCD5AE;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.todo-card:hover {
+  font-size: 20px;
+}
+
+button {
+    background-color: #D4A373;
+    color: #FEFAE0;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s
+}
+button:hover {
+    background-color: #b87c4d;
+    transform: rotate(-6deg);
+}
+
+
+a{
+  text-decoration: none;
+}
+
+
+.todo-card h2 {
+  margin-bottom: 0.5rem;
+  color: #D4A373;
+}
+
+.todo-card ul {
+  padding-left: 1.2rem;
+}
+
+.todo-card li {
+  list-style-type: disc;
+  margin-bottom: 0.3rem;
+}

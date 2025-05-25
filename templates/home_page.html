@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Styles/home_page2.css') }}">
+</head>
+<body>
+    {% if current_user.is_authenticated %}
+        <!-- Centered greeting -->
+        <div class="user-greeting">
+            <span>Hello, {{ current_user.email }}!</span>
+        </div>
+
+        <!-- Top-right logout button -->
+        <div class="home_page_buttons">
+            <form action="{{ url_for('logout') }}" method="post">
+                <button type="submit">Log out</button>
+            </form>
+        </div>
+    {% else %}
+        <div class="home_page_buttons">
+            <button type="button"><a href="{{ url_for('signup') }}">Sign up</a></button>
+            <button type="button"><a href="{{ url_for('login') }}">Log in</a></button>
+        </div>
+    {% endif %}
+
+
+
+    <h1 class="home_page">Home page</h1>
+    
+    <span class="message">Bienvenue sur votre assistant de productivité personnel !</span>
+
+    <div class="boutons">
+        <button type="button" title="Ajouter une tâche">
+            <a href="{{ url_for('new_page') }}"><img src="{{ url_for('static', filename='icons/add_icon.png') }}"></a>
+        </button>
+        <button type="button" title="Programmer nos tâches">
+            <img src="{{ url_for('static', filename='icons/schedule_icon.png') }}">
+        </button>
+        <button type="button">
+            <a href="{{ url_for('saved_lists') }}">View My To-Do Lists</a>
+        </button>
+    </div>
+
+    <section class="features">
+        <h2>Fonctionnalités principales</h2>
+        <ul>
+            <li>Tags <img src="{{url_for('static', filename='icons/tag_icon.png')}}" alt="tag_icon"></li>
+            <li>Schedules <img src="{{url_for('static', filename='icons/schedule_icon.png')}}" alt="calendar_icon"></li>
+            <li>User authentication <img src="{{url_for('static', filename='icons/lock_icon.png')}}" alt="lock_icon"></li>
+        </ul>
+    </section>
+
+    <footer>
+        <div class="informations">
+            <p>Ce site est encore un projet en construction développé par des contributeurs indépendants.</p>
+            <p>Certaines fonctionnalités sont encores en statut d'expérimentation</p>
+            <br>
+            <p>Notre but est d'augmenter la productivité des élèves avec un outil d'organisation moderne.</p>
+            <p>Si vous avez des suggestions ou des problèmes, contactez-nous :</p>
+            <nav>adresse1@gmail.com, adresse2@gmail.com</nav>
+            <span>@2025 Bloc-note. Tous droits réservés.</span>
+        </div>
+    </footer>
+</body>
+</html>

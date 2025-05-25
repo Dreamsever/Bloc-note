@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap'); */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #E9EDC9;
+    color: #333;
+    padding: 2rem;
+    line-height: 1.6;
+}
+
+.home_page_buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.home_page_buttons button {
+    background-color: #D4A373;
+    color: #FEFAE0;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s;
+}
+
+
+.home_page_buttons a {
+    text-decoration: none;
+    color: #FEFAE0;
+}
+
+.home_page_buttons button:hover {
+    background-color: #b87c4d;
+    transform: rotate(-6deg);
+}
+
+
+.user-greeting {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.user-greeting span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #6B705C;
+}
+
+
+h1.home_page {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #6B705C; 
+}
+
+.message {
+    display: block;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+
+.boutons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.boutons button {
+    background-color: #FAEDCD;
+    border: 1px solid #CCD5AE;
+    border-radius: 10px;
+    padding: 0.6rem;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+.boutons a {
+    text-decoration: none;
+    color: black;
+}
+.boutons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: rotate(-3deg);
+}
+
+.boutons img {
+    width: 24px;
+    height: 24px;
+}
+
+footer {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: #FEFAE0;
+    border-top: 1px solid #CCD5AE;
+}
+
+footer .informations {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+footer nav {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #6B705C;
+}
+
+footer span {
+    display: block;
+    margin-top: 0.5rem;
+    color: #888;
+}

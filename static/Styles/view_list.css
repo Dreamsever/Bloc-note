@@ -1,0 +1,89 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #FEFAE0;
+  padding: 2rem;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #6B705C;
+}
+
+#completed-count {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+ul#task-list {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+ul#task-list li {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  background-color: #FAEDCD;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #CCD5AE;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul#task-list li:hover {
+  transform: scale(1.01);
+}
+
+.done {
+  color: #CCD5AE;
+  text-decoration: line-through;
+  font-weight: bold;
+}
+
+#delete-list {
+  display: block;
+  margin: 1rem auto 0 auto;
+  background-color: #D4A373;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#delete-list:hover {
+  background-color: #b87c4d;
+  transform: scale(1.05);
+}
+
+#back-button {
+  display: block;
+  margin: 1rem auto;
+  background-color: #CCD5AE;
+  color: #333;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#back-button:hover {
+  background-color: #b8c29c;
+  transform: scale(1.05);
+}

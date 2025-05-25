@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='Styles/view_list.css') }}">
+  <script src="{{ url_for('static', filename='Scripts/view_list.js') }}" defer></script>
+</head>
+<body>
+  <h1>{{ title }}</h1>
+  <div id="completed-count">✔️ 0 / {{ tasks|length }} tasks completed</div>
+  <ul id="task-list" data-list-id="{{ list_id }}">
+  {% for task in tasks %}
+    <li>
+      <input type="checkbox" {% if task.done %}checked{% endif %}>
+      <span class="{% if task.done %}done{% endif %}">{{ task.text }}</span>
+    </li>
+  {% endfor %}
+  </ul>
+  <button id="delete-list">Delete this list</button>
+  <a href="{{ url_for('saved_lists') }}"><button id="back-button">← Back to all lists</button></a>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='Styles/new_page.css') }}">
+  <script src="{{ url_for('static', filename='Scripts/new_page.js') }}" defer></script>
+</head>
+<body>
+  <header class="app-header">
+    <button type="button" title="home" id="home"><a href="{{ url_for('home')}}">Home</a></button>
+    <h1>Task Manager</h1>
+  </header>
+
+  <main class="app-main">
+    <div id="save-message" class="save-message"></div>
+    <section class="task-entry">
+      <input type="text" id="list-title" placeholder="Enter list title...">
+      <input type="text" name="task_input" id="task_input" placeholder="Enter a new task...">
+      <input type="text" id="task_tag" placeholder="Tag (optional)">
+      <button id="Add_button" type="button">Add Task</button>
+      <button id="Save_button" type="button">Save Tasks</button>
+    </section>
+    <h2 id="display-title" class="list-title"></h2>
+
+    <section class="task-list-section">
+      <ul id="taskList" class="task-list"></ul>
+    </section>
+  </main>
+</body>
+</html>

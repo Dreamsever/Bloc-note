@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Saved To-Do Lists</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='Styles/saved_lists.css') }}">
+</head>
+<body>
+<header>
+  <h1>Your Saved Lists</h1>
+  <div class="button-column">
+    <form action="{{url_for('home')}}">
+      <button type="submit">🏠Home</button>
+    </form>
+    <form action="{{ url_for('logout') }}" method="POST">
+      <button type="submit">Logout</button>
+    </form>
+  </div>
+</header>
+
+  <div class="list-container">
+    {% for todo in todolists %}
+      <a href="{{ url_for('view_list', list_id=todo.id) }}">
+        <div class="todo-card">
+          <h2>{{ todo.title }}</h2>
+          <ul>
+            {% for task in todo.tasks[:3] %}
+              <li>{{ task.text if task.text else 'Untitled Task' }}</li>
+            {% endfor %}
+            {% if todo.tasks|length > 3 %}
+              <li>+ {{ todo.tasks|length - 3 }} more...</li>
+            {% endif %}
+          </ul>
+        </div>
+      </a>
+    {% else %}
+      <p>You have no saved lists.</p>
+    {% endfor %}
+  </div>
+</body>
+</html>

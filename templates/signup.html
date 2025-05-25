@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Styles/auth.css') }}">
+</head>
+<body>
+    <div class="auth-container">
+        <h2>Inscription</h2>
+        <form method="POST">
+            <input type="text" name="email" placeholder="Nom d'utilisateur" required>
+            <input type="password" name="password" placeholder="Mot de passe" required>
+            <button type="submit">S'inscrire</button>
+        </form>
+        <p>Déjà inscrit ? <a href="{{ url_for('login') }}">Se connecter</a></p>
+    </div>
+</body>
+</html>
