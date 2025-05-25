@@ -8,16 +8,13 @@
 </head>
 <body>
     {% if current_user.is_authenticated %}
-        <!-- Centered greeting -->
-        <div class="user-greeting">
-            <span>Hello, {{ current_user.email }}!</span>
-        </div>
-
-        <!-- Top-right logout button -->
         <div class="home_page_buttons">
             <form action="{{ url_for('logout') }}" method="post">
                 <button type="submit">Log out</button>
             </form>
+        </div>
+        <div class="user-greeting">
+            <span>Hello, {{ current_user.email }}!</span>
         </div>
     {% else %}
         <div class="home_page_buttons">
@@ -30,7 +27,7 @@
 
     <h1 class="home_page">Home page</h1>
     
-    <span class="message">Bienvenue sur votre assistant de productivité personnel !</span>
+    <span class="message">Welcome to *website_name* !</span>
 
     <div class="boutons">
         <button type="button" title="Ajouter une tâche">
@@ -55,13 +52,13 @@
 
     <footer>
         <div class="informations">
-            <p>Ce site est encore un projet en construction développé par des contributeurs indépendants.</p>
-            <p>Certaines fonctionnalités sont encores en statut d'expérimentation</p>
+            <p>This site is still a work in progress developed by independent contributors.</p>
+            <p>Some features are still experimental.</p>
             <br>
-            <p>Notre but est d'augmenter la productivité des élèves avec un outil d'organisation moderne.</p>
-            <p>Si vous avez des suggestions ou des problèmes, contactez-nous :</p>
+            <p>Our goal is to increase students' productivity with a modern organization tool.</p>
+            <p>If you have suggestions or issues, contact us:</p>
             <nav>joyce.kimbeni@ascitech.ac.cd, perla.mpoyi@ascitech.ac.cd</nav>
-            <span>@2025 Bloc-note. Tous droits réservés.</span>
+            <span>@2025 Bloc-note. All rights reserved.</span>
         </div>
     </footer>
 </body>
