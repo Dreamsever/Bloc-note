@@ -79,8 +79,12 @@ main.app-main {
   padding: 0.5rem 1rem;
   color: #fff;
   font-weight: 600;
+  transition: background-color,transform, 0.3s;
 }
-
+#home:hover {
+  background-color: #b87c4d;
+  transform: rotate(3deg);
+}
 .task-tag {
   background-color: #CCD5AE;
   color: #333;

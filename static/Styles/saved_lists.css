@@ -59,7 +59,7 @@ button {
 }
 button:hover {
     background-color: #b87c4d;
-    transform: rotate(-6deg);
+    transform: rotate(6deg);
 }
 
 

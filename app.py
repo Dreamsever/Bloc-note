@@ -132,8 +132,6 @@ def fix_tasks_format():
         except Exception as e:
             return f"Error fixing list {lst.id}: {e}", 500
 
-    return f"✅ Fixed {fixed_count} list(s)!"
-
 @app.route('/new_page')
 @login_required
 def new_page():
