@@ -40,7 +40,7 @@ body {
 
 .home_page_buttons button:hover {
     background-color: #b87c4d;
-    transform: rotate(-6deg);
+    transform: rotate(6deg);
 }
 
 
@@ -92,7 +92,7 @@ h1.home_page {
 .boutons button:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transform: rotate(-3deg);
+    transform: rotate(3deg);
 }
 
 .boutons img {
