@@ -7,7 +7,7 @@ import json
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -34,6 +34,11 @@ def load_user(user_id):
 @app.route('/')
 def home():
     return render_template('home_page.html')
+
+@app.route('/init_db')
+def init_db():
+    db.create_all()
+    return "Database initialized!"
 
 @app.route('/logout', methods=['POST'])
 @login_required
